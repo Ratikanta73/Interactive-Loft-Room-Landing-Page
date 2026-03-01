@@ -1,4 +1,4 @@
-# 🕯️ Abinya 3.0 — Interactive Loft Room Landing Page
+# 🕯️ Abinya 3.0 - Interactive Loft Room Landing Page
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML-Single%20File-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
@@ -25,15 +25,15 @@
 
 ## 🖼️ Preview
 
-### 🌑 Lights Off — Before
+### 🌑 Lights Off - Before
 
-![Before — Lights Off](Before.png)
+![Before - Lights Off](Before.png)
 
 > The room sits in darkness. Furniture is barely visible. The switch on the right wall waits.
 
-### 💡 Lights On — After
+### 💡 Lights On - After
 
-![After — Lights On](After.png)
+![After - Lights On](After.png)
 
 > One click on the rocker switch. The bulb flickers to life, warm amber floods the room, the floor reflects the glow, and *"The Ideas Are Warming Up…"* fades in. Ambient music begins.
 
@@ -75,9 +75,9 @@
 
 ## 🖼️ What Is This?
 
-**Abinya 3.0** is a fully self-contained single HTML file that renders a detailed, atmospheric loft room scene using only CSS and vanilla JavaScript. There are no external assets, no frameworks, no build process, and no backend — just one file you can open in any browser.
+**Abinya 3.0** is a fully self-contained single HTML file that renders a detailed, atmospheric loft room scene using only CSS and vanilla JavaScript. There are no external assets, no frameworks, no build process, and no backend - just one file you can open in any browser.
 
-It is designed to be used as a **website landing page** — particularly for:
+It is designed to be used as a **website landing page** - particularly for:
 
 - 🎓 Hackathons and tech events
 - 🌐 Personal portfolio intro screens  
@@ -107,7 +107,7 @@ CONCEPT & LAYOUT
 
 Build a 1440×600px CSS-only loft room rendered as a 2D illustration with 3D perspective effects.
 The room has a ceiling, back wall, left/right side walls, and a 3D perspective wooden floor.
-All room elements are pure CSS — no images. A JavaScript scale function resizes the entire room
+All room elements are pure CSS - no images. A JavaScript scale function resizes the entire room
 to fit any screen using Math.min(vw/1440, vh/600). On portrait mobile, hide the room and show a
 "rotate your phone" overlay with an animated phone icon.
 
@@ -115,11 +115,11 @@ to fit any screen using Math.min(vw/1440, vh/600). On portrait mobile, hide the 
 
 ROOM STRUCTURE
 
-- Ceiling (top 18%) — very dark brown gradient, with a decorative molding strip at the bottom edge
-- Back wall (18% to 74% height) — dark wood-tone gradient with subtle repeating panel grid lines
+- Ceiling (top 18%) - very dark brown gradient, with a decorative molding strip at the bottom edge
+- Back wall (18% to 74% height) - dark wood-tone gradient with subtle repeating panel grid lines
   and a wainscot panel at the bottom third
-- Left & right side walls (9% wide each) — darker gradient to suggest depth
-- Floor (bottom 26%) — TRUE 3D perspective wooden planks using CSS perspective(240px) rotateX(62deg)
+- Left & right side walls (9% wide each) - darker gradient to suggest depth
+- Floor (bottom 26%) - TRUE 3D perspective wooden planks using CSS perspective(240px) rotateX(62deg)
   on an oversized div (left/right: -60%, height: 340%) so planks visually converge toward the back
   wall. Planks have vertical divider lines, horizontal wood grain rings, and a warm brown color.
   Add a shadow strip at the wall-floor join and a warm lamp glow pool that appears when lights are on.
@@ -128,7 +128,7 @@ ROOM STRUCTURE
 
 FURNITURE & PROPS (all pure CSS, positioned absolutely)
 
-1. Hanging pendant lamp (center top, z-index 50 — always in front of everything):
+1. Hanging pendant lamp (center top, z-index 50 - always in front of everything):
    - Ceiling rose → thin cord (115px) → trapezoidal shade → socket → Edison-style bulb with SVG filament
    - When ON: bulb glows warm amber with multiple box-shadow layers (18px, 55px, 110px, 220px radii),
      filament glows with drop-shadow filter, shade gets inner glow, and a flicker animation plays on toggle
@@ -138,7 +138,7 @@ FURNITURE & PROPS (all pure CSS, positioned absolutely)
    - Green curtains on left and right, slightly skewed, with a curtain rod above
 
 3. Wall art frame (right of center, ~62% from left):
-   - Ornate dark wood frame with abstract painted interior (CSS gradients — blue/amber tones)
+   - Ornate dark wood frame with abstract painted interior (CSS gradients - blue/amber tones)
    - Label below reads "Abinya 3.0" in tiny monospace font
 
 4. Bookshelf (bottom-left, 10% from left):
@@ -162,7 +162,7 @@ FURNITURE & PROPS (all pure CSS, positioned absolutely)
    - Ivory/cream switch plate with two Phillips screws
    - Rocker switch that physically rotates -7deg (off) / +7deg (on) using CSS transform
    - Red LED (off) / green LED (on)
-   - This is the INTERACTIVE element — clicking it toggles everything
+   - This is the INTERACTIVE element - clicking it toggles everything
 
 ---
 
@@ -189,8 +189,8 @@ When switch is clicked ON:
 
 TEXT OVERLAY (appears when lights on, bottom center of wall)
 
-- Heading: "The Ideas Are Warming Up…" — Cormorant Garamond italic 24px, amber color #ffd060, glow text-shadow
-- Subtext: "Innovation · Creativity · Engineering Excellence" — DM Mono 9px, muted amber, uppercase
+- Heading: "The Ideas Are Warming Up…" - Cormorant Garamond italic 24px, amber color #ffd060, glow text-shadow
+- Subtext: "Innovation · Creativity · Engineering Excellence" - DM Mono 9px, muted amber, uppercase
 
 ---
 
@@ -218,8 +218,8 @@ When lights turn ON, generate procedural audio:
 
 FONTS
 
-- Cormorant Garamond (italic 300 weight) — for decorative text
-- DM Mono (300 weight) — for labels, switch markings (I/O), music label
+- Cormorant Garamond (italic 300 weight) - for decorative text
+- DM Mono (300 weight) - for labels, switch markings (I/O), music label
 
 ---
 
@@ -276,7 +276,7 @@ KEY TECHNICAL RULES
 - Floor planks div extends left/right by -60% and height 340%, rotated on X axis
   with perspective 240px from bottom center
 - Grain is a position:fixed SVG data-URL overlay at z-index 100
-- All lighting transitions use CSS only — JS only adds/removes the .on class on .room
+- All lighting transitions use CSS only - JS only adds/removes the .on class on .room
 - Music only starts on user click (required by browser autoplay policy)
 ```
 
@@ -290,16 +290,16 @@ KEY TECHNICAL RULES
 
 | Feature | Description |
 |---|---|
-| 🏠 **Full Loft Room Scene** | Ceiling, back wall, side walls, wainscot panels, molding — all in pure CSS |
-| 🪵 **3D Perspective Floor** | Wood planks that recede toward the horizon using CSS `rotateX` perspective — no WebGL |
+| 🏠 **Full Loft Room Scene** | Ceiling, back wall, side walls, wainscot panels, molding - all in pure CSS |
+| 🪵 **3D Perspective Floor** | Wood planks that recede toward the horizon using CSS `rotateX` perspective - no WebGL |
 | 💡 **Interactive Light Switch** | Realistic rocker switch with physical tilt animation, LED indicator, and full lighting toggle |
-| 🌡️ **Dynamic Lighting System** | 12+ elements change simultaneously — bulb glow, floor pool, wall bloom, shade glow, table lamp |
+| 🌡️ **Dynamic Lighting System** | 12+ elements change simultaneously - bulb glow, floor pool, wall bloom, shade glow, table lamp |
 | 🪑 **Tufted Leather Armchair** | Fully CSS-rendered with tufting buttons, padded seat, armrests and legs |
 | 📚 **Bookshelf with Books & Plant** | Three shelves of varied books, small plant with leaves and terracotta pot |
 | 🪔 **Side Table with Lamp** | Working table lamp that activates with the main lights |
 | 🪟 **Window with Curtains** | Dark glass pane with cross mullions, curtain rod, and draped green curtains |
 | 🖼️ **Framed Wall Art** | Abstract CSS painting in an ornate dark wood frame with artist label |
-| 🎵 **Procedural Ambient Music** | Synthesised pads and melody via Web Audio API — zero audio files |
+| 🎵 **Procedural Ambient Music** | Synthesised pads and melody via Web Audio API - zero audio files |
 | 📱 **Mobile Landscape Mode** | Portrait triggers a beautiful "rotate your phone" screen; landscape fills perfectly |
 | 🎞️ **Film Grain Overlay** | SVG fractal noise at 4% opacity for a cinematic, analogue feel |
 | 🔤 **Elegant Typography** | Cormorant Garamond (serif) + DM Mono (mono) loaded from Google Fonts |
@@ -325,13 +325,13 @@ xdg-open index.html    # Linux
 
 ## 🚀 Quick Start
 
-### Option A — Use as-is
+### Option A - Use as-is
 
 1. Download `index.html`
 2. Open it in a browser
 3. Click the switch on the right wall
 
-### Option B — Clone & Customise
+### Option B - Clone & Customise
 
 ```bash
 # Clone
@@ -345,7 +345,7 @@ code index.html     # or any text editor
 open index.html
 ```
 
-### Option C — Fork on GitHub
+### Option C - Fork on GitHub
 
 1. Click **Fork** in the top right of this page
 2. Edit `index.html` directly in GitHub's editor  
@@ -425,7 +425,7 @@ The small music indicator in the bottom-left shows a label when music plays:
 <span class="music-label">Nocturne</span>
 ```
 
-Change `Nocturne` to match your vibe — `Ambient`, `Lo-fi`, `v2.0`, your event hashtag, anything short.
+Change `Nocturne` to match your vibe - `Ambient`, `Lo-fi`, `v2.0`, your event hashtag, anything short.
 
 ---
 
@@ -437,14 +437,14 @@ The room is built with rich dark browns and warm amber lighting. Here are the ke
 
 | Element | Color (Off) | Color (On) | CSS Class |
 |---|---|---|---|
-| Light glow / text | — | `#ffd060` | `.bulb.on`, `.light-text h2` |
+| Light glow / text | - | `#ffd060` | `.bulb.on`, `.light-text h2` |
 | Ceiling | `#0e0c09` | `#1e1a10` | `.ceiling` |
 | Back wall | `#1e1912` | `#30261a` | `.wall` |
 | Side walls | `#090806` | `#141009` | `.left-wall` |
 | Floor planks | `#2a1d0f` | (brighter) | `.floor-planks` |
-| Leather chair | `#4c3622` | — | `.chair-back` |
-| Curtains | `#1e2a1a` | — | `.curtain` |
-| Switch plate | `#cec5a4` | — | `.switch-plate` |
+| Leather chair | `#4c3622` | - | `.chair-back` |
+| Curtains | `#1e2a1a` | - | `.curtain` |
+| Switch plate | `#cec5a4` | - | `.switch-plate` |
 
 #### Example: Blue Night Theme
 
@@ -474,8 +474,8 @@ Two fonts load from Google Fonts at the top of the `<head>`:
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=DM+Mono:wght@300&display=swap" rel="stylesheet">
 ```
 
-- **Cormorant Garamond** — the elegant italic heading
-- **DM Mono** — monospace labels, switch text, music label
+- **Cormorant Garamond** - the elegant italic heading
+- **DM Mono** - monospace labels, switch text, music label
 
 **To swap fonts:**
 
@@ -509,25 +509,25 @@ Remove the `<link>` tag from the `<head>` and the page will load with zero exter
 Every furniture piece is absolutely positioned within the room. The floor line is at `bottom: 26%`. You can freely move items left or right.
 
 ```css
-/* Bookshelf — default: left side */
+/* Bookshelf - default: left side */
 .bookshelf {
   left: 10%;      /* ← adjust this to move left/right */
   bottom: 26%;    /* keep this to stay on the floor */
 }
 
-/* Armchair — default: right side */
+/* Armchair - default: right side */
 .armchair {
   right: 11%;     /* ← adjust this */
   bottom: 26%;
 }
 
-/* Side table — auto-positioned next to armchair */
+/* Side table - auto-positioned next to armchair */
 .side-table {
   right: calc(11% + 156px);   /* ← 156px is the armchair width */
   bottom: 26%;
 }
 
-/* Rug — centred by default */
+/* Rug - centred by default */
 .rug {
   left: 50%;
   transform: translateX(-50%);  /* keeps it centred */
@@ -543,7 +543,7 @@ Every furniture piece is absolutely positioned within the room. The floor line i
 
 The room is designed at **1440 × 600 px**. This gives a wide cinematic aspect ratio. To change it:
 
-**Step 1** — Update the CSS:
+**Step 1** - Update the CSS:
 ```css
 .room {
   width:  1440px;   /* ← your new width  */
@@ -551,7 +551,7 @@ The room is designed at **1440 × 600 px**. This gives a wide cinematic aspect r
 }
 ```
 
-**Step 2** — Update the JavaScript scale function to match:
+**Step 2** - Update the JavaScript scale function to match:
 ```javascript
 function scaleRoom() {
   const scale = Math.min(stage.clientWidth / 1440, stage.clientHeight / 600);
@@ -635,14 +635,14 @@ The current music plays a **Cm9 chord** (C minor 9). The pad frequencies are def
 
 ```javascript
 const PAD = [
-  {f: 130.81, v: 0.055},  // C3  — root
-  {f: 155.56, v: 0.048},  // Eb3 — minor third
-  {f: 196.00, v: 0.052},  // G3  — fifth
-  {f: 233.08, v: 0.040},  // Bb3 — minor seventh
-  {f: 293.66, v: 0.032},  // D4  — ninth
-  {f: 349.23, v: 0.025},  // F4  — eleventh
-  {f: 392.00, v: 0.020},  // G4  — upper fifth
-  {f: 466.16, v: 0.015},  // Bb4 — upper seventh
+  {f: 130.81, v: 0.055},  // C3  - root
+  {f: 155.56, v: 0.048},  // Eb3 - minor third
+  {f: 196.00, v: 0.052},  // G3  - fifth
+  {f: 233.08, v: 0.040},  // Bb3 - minor seventh
+  {f: 293.66, v: 0.032},  // D4  - ninth
+  {f: 349.23, v: 0.025},  // F4  - eleventh
+  {f: 392.00, v: 0.020},  // G4  - upper fifth
+  {f: 466.16, v: 0.015},  // Bb4 - upper seventh
 ];
 ```
 
@@ -706,7 +706,7 @@ To **allow portrait mode** (if you don't need the lock), remove or comment out t
 
 ### 11. 🔲 Add a Call-to-Action Button
 
-When the lights turn on, you may want a button to appear — a link to your project, registration form, or portfolio. 
+When the lights turn on, you may want a button to appear - a link to your project, registration form, or portfolio. 
 
 Add this inside the `.wall` div, after the `.light-text` div:
 
@@ -866,7 +866,7 @@ function scaleRoom() {
 window.addEventListener('resize', scaleRoom);
 ```
 
-This is the same technique used by game engines for pixel-perfect UI — the design never reflows, just scales.
+This is the same technique used by game engines for pixel-perfect UI - the design never reflows, just scales.
 
 ### 3D Floor Without WebGL
 
@@ -885,9 +885,9 @@ The perspective floor uses a single CSS transform trick:
 }
 ```
 
-By making the element much **wider and taller** than its container, then rotating it toward the viewer on the X axis, the parallel plank lines converge toward a vanishing point at the top — creating true perspective depth without any 3D library.
+By making the element much **wider and taller** than its container, then rotating it toward the viewer on the X axis, the parallel plank lines converge toward a vanishing point at the top - creating true perspective depth without any 3D library.
 
-### Lighting System — 12 Simultaneous Transitions
+### Lighting System - 12 Simultaneous Transitions
 
 The entire lighting system is driven by a single CSS class toggle. JavaScript adds or removes `.on` from the `.room` element, and CSS handles every transition:
 
@@ -898,24 +898,24 @@ room.classList.toggle('on'); // this one line triggers everything
 CSS selectors react to this class across the entire element tree:
 
 ```css
-/* Example — wall changes colour */
+/* Example - wall changes colour */
 .wall             { background: #1e1912; transition: background 1.2s ease; }
 .room.on .wall    { background: #30261a; }
 
-/* Example — floor brightens */
+/* Example - floor brightens */
 .floor-planks                { filter: brightness(1); }
 .room.on .floor-planks       { filter: brightness(2.1) saturate(1.3); }
 
-/* Example — light pool appears */
+/* Example - light pool appears */
 .floor-pool                  { opacity: 0; transition: opacity 1.4s ease; }
 .room.on .floor-pool         { opacity: 1; }
 ```
 
 All 12+ transitions run simultaneously and are GPU-accelerated (only `filter`, `opacity`, `background`, `box-shadow` and `transform` are animated).
 
-### Pendant Lamp — Always on Top
+### Pendant Lamp - Always on Top
 
-The lamp has `z-index: 50` as a direct child of `.room`, placed **after** the wall div in the HTML. This means it renders on top of the wall art, bookshelf, and all other elements — just like a real lamp hanging from the ceiling:
+The lamp has `z-index: 50` as a direct child of `.room`, placed **after** the wall div in the HTML. This means it renders on top of the wall art, bookshelf, and all other elements - just like a real lamp hanging from the ceiling:
 
 ```html
 <div class="room">
@@ -930,7 +930,7 @@ The lamp has `z-index: 50` as a direct child of `.room`, placed **after** the wa
 </div>
 ```
 
-### Ambient Music — How the Synthesis Works
+### Ambient Music - How the Synthesis Works
 
 The music system uses the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) to build a synthesiser entirely in JavaScript:
 
@@ -953,9 +953,9 @@ The music system uses the [Web Audio API](https://developer.mozilla.org/en-US/do
  → own LPF → Master Gain
 ```
 
-The reverb is created procedurally: a buffer of decaying random noise becomes the impulse response for `createConvolver()`. No audio files, no samples — the reverb is computed on the fly.
+The reverb is created procedurally: a buffer of decaying random noise becomes the impulse response for `createConvolver()`. No audio files, no samples - the reverb is computed on the fly.
 
-### Portrait Detection — Pure CSS
+### Portrait Detection - Pure CSS
 
 No JavaScript is used to detect orientation. The CSS media query handles everything:
 
@@ -996,9 +996,9 @@ The phone icon animates with a simple CSS keyframe that tilts -90° and back on 
 | Mobile Safari | 14+ | ✅ Landscape only | |
 | Samsung Internet | 14+ | ✅ Full | |
 | Opera | 76+ | ✅ Full | |
-| IE 11 | — | ❌ Not supported | CSS transforms not compatible |
+| IE 11 | - | ❌ Not supported | CSS transforms not compatible |
 
-> **Audio note:** All modern browsers require a user interaction (a click or tap) before audio can play. This project handles this naturally — music only starts when the user clicks the wall switch.
+> **Audio note:** All modern browsers require a user interaction (a click or tap) before audio can play. This project handles this naturally - music only starts when the user clicks the wall switch.
 
 ---
 
@@ -1028,7 +1028,7 @@ The phone icon animates with a simple CSS keyframe that tilts -90° and back on 
 ```bash
 npm i -g vercel
 vercel deploy
-# Follow the prompts — live in ~30 seconds
+# Follow the prompts - live in ~30 seconds
 ```
 
 ### Cloudflare Pages (Free)
@@ -1036,12 +1036,12 @@ vercel deploy
 1. Push to a GitHub repo
 2. Go to Cloudflare Pages → Create a project
 3. Connect your GitHub repo
-4. No build command needed — just set output directory to `/`
+4. No build command needed - just set output directory to `/`
 
 ### Self-hosted / VPS
 
 ```bash
-# Nginx — serve the file directly
+# Nginx - serve the file directly
 server {
   listen 80;
   server_name yourdomain.com;
@@ -1082,13 +1082,13 @@ After deploying to GitHub Pages, Netlify, or Vercel, add your custom domain thro
 ## ❓ FAQ
 
 **Q: Does this work offline?**  
-A: Yes, fully — except Google Fonts will fall back to system fonts. The room, music, and all interactions work with no internet connection.
+A: Yes, fully - except Google Fonts will fall back to system fonts. The room, music, and all interactions work with no internet connection.
 
 **Q: Can I add images to the room?**  
 A: Yes. Use `<img>` tags with `position: absolute` inside the `.room` div, with `bottom: 26%` to place them on the floor line. Set a `z-index` between 9 and 49 so they render behind the lamp.
 
 **Q: Why doesn't the music play on mobile?**  
-A: Browsers require a user gesture before audio. On mobile, tap the switch — if audio still doesn't play on Safari, make sure your device is not in silent mode.
+A: Browsers require a user gesture before audio. On mobile, tap the switch - if audio still doesn't play on Safari, make sure your device is not in silent mode.
 
 **Q: Can I add video to the window?**  
 A: Yes! Replace the `.window-frame` background with a `<video>` element playing a looping night scene. Set `position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover` on the video.
@@ -1105,14 +1105,14 @@ rocker.classList.add('on');
 led.style.background = 'rgba(60,220,60,0.88)';
 led.style.boxShadow  = '0 0 7px rgba(60,255,60,0.75)';
 bulb.classList.add('on');
-// Note: don't call startMusic() here — audio needs a user gesture first
+// Note: don't call startMusic() here - audio needs a user gesture first
 ```
 
 **Q: Can I use this commercially?**  
 A: Yes. The MIT license permits commercial use, modification, and distribution. Attribution is appreciated but not required.
 
 **Q: Why is the room 1440 × 600 and not 16:9?**  
-A: The 2.4:1 cinematic ratio was chosen intentionally — it fills widescreen monitors beautifully and feels like a movie frame. On 16:9 screens it scales down with letterboxing above and below, which adds to the cinematic feel. You can change it to 1280×720 (16:9) if you prefer — see [Change the Canvas Size](#8--change-the-canvas-size).
+A: The 2.4:1 cinematic ratio was chosen intentionally - it fills widescreen monitors beautifully and feels like a movie frame. On 16:9 screens it scales down with letterboxing above and below, which adds to the cinematic feel. You can change it to 1280×720 (16:9) if you prefer - see [Change the Canvas Size](#8--change-the-canvas-size).
 
 **Q: How do I add my own furniture or decorations?**  
 A: Add new `<div>` elements inside `.room`, position them with `position: absolute; bottom: 26%` for floor-level items, and style with CSS. Add a `.room.on .your-element { filter: brightness(1) }` state for the lit version.
@@ -1161,7 +1161,7 @@ git push origin feature/add-cat-on-chair
 
 ### Contribution Guidelines
 
-- Keep everything in a single `index.html` file — no build tools or separate assets unless truly necessary
+- Keep everything in a single `index.html` file - no build tools or separate assets unless truly necessary
 - Test in at least Chrome and Firefox before submitting
 - Keep the total file size under 60 KB
 - Follow the existing CSS naming convention (`.kebab-case`)
@@ -1226,13 +1226,13 @@ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
 ## 🙏 Credits
 
 **Core technologies:**
-- [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) — procedural music synthesis
-- [CSS Transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) — 3D floor perspective effect
-- [SVG Filters](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter) — film grain overlay
+- [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) - procedural music synthesis
+- [CSS Transforms](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) - 3D floor perspective effect
+- [SVG Filters](https://developer.mozilla.org/en-US/docs/Web/SVG/Element/filter) - film grain overlay
 
 **Fonts:**
-- [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond) by Christian Thalmann — Google Fonts
-- [DM Mono](https://fonts.google.com/specimen/DM+Mono) by Colophon Foundry — Google Fonts
+- [Cormorant Garamond](https://fonts.google.com/specimen/Cormorant+Garamond) by Christian Thalmann - Google Fonts
+- [DM Mono](https://fonts.google.com/specimen/DM+Mono) by Colophon Foundry - Google Fonts
 
 **Inspiration:**
 - The warmth of a lamp-lit room on a cold night
