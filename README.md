@@ -1,4 +1,4 @@
-# 🕯️ Interactive Loft Room Landing Page
+# 🕯️ Abinya 3.0 — Interactive Loft Room Landing Page
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML-Single%20File-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
@@ -26,6 +26,7 @@
 ## 📖 Table of Contents
 
 - [What Is This?](#-what-is-this)
+- [Text Prompt to Regenerate This](#-text-prompt-to-regenerate-this)
 - [Features](#-features)
 - [Live Demo](#-live-demo)
 - [Quick Start](#-quick-start)
@@ -71,20 +72,217 @@ The room comes alive when you click the wall switch. Lights glow, the floor refl
 
 ---
 
+---
+
+## 🧠 Text Prompt to Regenerate This
+
+You can recreate this entire project from scratch by giving the following prompt to any capable AI (Claude, GPT-4, etc.). This is the exact prompt used to generate Abinya 3.0:
+
+<details>
+<summary><strong>Click to expand the full generation prompt</strong></summary>
+
+```
+Create a single HTML file interactive loft room scene called "Abinya 3.0" with the following specifications:
+
+---
+
+CONCEPT & LAYOUT
+
+Build a 1440×600px CSS-only loft room rendered as a 2D illustration with 3D perspective effects.
+The room has a ceiling, back wall, left/right side walls, and a 3D perspective wooden floor.
+All room elements are pure CSS — no images. A JavaScript scale function resizes the entire room
+to fit any screen using Math.min(vw/1440, vh/600). On portrait mobile, hide the room and show a
+"rotate your phone" overlay with an animated phone icon.
+
+---
+
+ROOM STRUCTURE
+
+- Ceiling (top 18%) — very dark brown gradient, with a decorative molding strip at the bottom edge
+- Back wall (18% to 74% height) — dark wood-tone gradient with subtle repeating panel grid lines
+  and a wainscot panel at the bottom third
+- Left & right side walls (9% wide each) — darker gradient to suggest depth
+- Floor (bottom 26%) — TRUE 3D perspective wooden planks using CSS perspective(240px) rotateX(62deg)
+  on an oversized div (left/right: -60%, height: 340%) so planks visually converge toward the back
+  wall. Planks have vertical divider lines, horizontal wood grain rings, and a warm brown color.
+  Add a shadow strip at the wall-floor join and a warm lamp glow pool that appears when lights are on.
+
+---
+
+FURNITURE & PROPS (all pure CSS, positioned absolutely)
+
+1. Hanging pendant lamp (center top, z-index 50 — always in front of everything):
+   - Ceiling rose → thin cord (115px) → trapezoidal shade → socket → Edison-style bulb with SVG filament
+   - When ON: bulb glows warm amber with multiple box-shadow layers (18px, 55px, 110px, 220px radii),
+     filament glows with drop-shadow filter, shade gets inner glow, and a flicker animation plays on toggle
+
+2. Window (top-left of wall, ~13% from left):
+   - Dark frame with cross mullions, deep blue-black glass interior
+   - Green curtains on left and right, slightly skewed, with a curtain rod above
+
+3. Wall art frame (right of center, ~62% from left):
+   - Ornate dark wood frame with abstract painted interior (CSS gradients — blue/amber tones)
+   - Label below reads "Abinya 3.0" in tiny monospace font
+
+4. Bookshelf (bottom-left, 10% from left):
+   - 142×205px dark wood unit with 3 visible shelves
+   - Books of varying widths/heights/colors on each shelf
+   - Small plant with 3 leaves + terracotta pot on top shelf
+
+5. Leather armchair (bottom-right, 11% from right):
+   - Full tufted leather chair: back panel with tufting buttons, padded seat, two armrests, four legs
+   - Colors: deep brown leather (#4c3622 to #5e4430)
+   - No throw/blanket on the chair
+
+6. Side table (beside armchair):
+   - Table lamp with yellow shade (active when lights on), thin base, flat foot
+   - Two small books on tabletop, two thin legs
+
+7. Rug (center bottom):
+   - 370px wide striped rug with repeating brown pattern, border stripes
+
+8. Wall switch (right wall, ~26% from top of wall):
+   - Ivory/cream switch plate with two Phillips screws
+   - Rocker switch that physically rotates -7deg (off) / +7deg (on) using CSS transform
+   - Red LED (off) / green LED (on)
+   - This is the INTERACTIVE element — clicking it toggles everything
+
+---
+
+LIGHTING SYSTEM (CSS transitions, 1.2s ease)
+
+When switch is clicked ON:
+- Ceiling brightens
+- Wall warms (cooler dark → warmer brown tones)
+- Side walls warm
+- Bulb glows amber with multi-layer box-shadow
+- Lamp shade gets interior glow
+- Wall art brightens (filter: brightness 0.82)
+- Bookshelf brightens (filter: brightness 0.88)
+- Armchair brightens
+- Side table lamp shade brightens + glow appears
+- Floor planks brighten (filter: brightness 2.1 saturate 1.3)
+- Floor gets warm amber reflective sheen overlay
+- Lamp glow pool appears on floor
+- Wall bloom radial gradient appears behind lamp
+- Heading text fades in over the wall
+- Music visualizer (animated bars) appears bottom-left
+
+---
+
+TEXT OVERLAY (appears when lights on, bottom center of wall)
+
+- Heading: "The Ideas Are Warming Up…" — Cormorant Garamond italic 24px, amber color #ffd060, glow text-shadow
+- Subtext: "Innovation · Creativity · Engineering Excellence" — DM Mono 9px, muted amber, uppercase
+
+---
+
+MUSIC VISUALIZER UI (bottom-left of wall, appears when lights on)
+
+- Musical note icon ♪
+- 6 animated bars that pulse up/down with staggered delays
+- Label: "Nocturne" in tiny DM Mono
+
+---
+
+AMBIENT MUSIC (Web Audio API, triggered on switch toggle)
+
+When lights turn ON, generate procedural audio:
+- Pad chord: 8 oscillators (Cm9 voicing: 130Hz to 466Hz), alternating sine/triangle waves, each with
+  slow LFO frequency modulation (vibrato ~0.04Hz) and slow tremolo amplitude modulation (~0.06Hz)
+- Convolution reverb: 5-second impulse response generated from decaying noise
+- Low-pass filter: cutoff 1400Hz, Q 0.5
+- Melodic notes: pentatonic melody (523, 622, 698, 784, 932 Hz) plays one note every 1.6–3.4 seconds
+  using triangle wave through a second LPF, with slow attack and exponential decay
+- Master gain fades in over 3.5 seconds
+- When lights turn OFF: master gain fades out over 2.2 seconds, all oscillators stopped
+
+---
+
+FONTS
+
+- Cormorant Garamond (italic 300 weight) — for decorative text
+- DM Mono (300 weight) — for labels, switch markings (I/O), music label
+
+---
+
+CANVAS & RESPONSIVE SCALING
+
+- Room is a fixed 1440×600px div
+- A .stage wrapper fills 100vw × 100vh and centres the room
+- JS scaleRoom() function: scale = Math.min(vw/1440, vh/600)
+  applied as room.style.transform = `scale(${scale})`
+- Runs on load and window resize
+
+---
+
+PORTRAIT OVERLAY
+
+When device is in portrait orientation (CSS @media (orientation:portrait)):
+- Hide the room stage completely
+- Show a full-screen dark overlay (#0a0806 → #1a1410 gradient)
+- Show animated phone icon (SVG rect + rotation arrow) that loops rotating -90deg then back
+  using @keyframes rockit animation (2.2s, ease-in-out, infinite)
+- Text: "rotate your phone" (Cormorant Garamond italic, amber #ffd060)
+- Subtext: "landscape mode · for best experience" (DM Mono, muted)
+- When rotated to landscape: overlay hides instantly, room reappears
+
+---
+
+GRAIN OVERLAY
+
+Fixed position SVG fractalNoise grain texture (baseFrequency 0.85, 4 octaves) at 4% opacity
+over entire scene for film-like quality. z-index: 100.
+
+---
+
+COLOR PALETTE
+
+- Background/shadows:  #050403, #0a0806, #0e0c09
+- Dark wood:           #1e1912, #17130d, #14110c
+- Mid wood:            #2a1e10, #1e1509, #3c2c18
+- Warm wood lit:       #30261a, #231d12, #271e10
+- Leather:             #4c3622, #302214, #5e4430, #3c2a18
+- Switch plate:        #cec5a4, #b0a482, #c8bc9a
+- Amber light:         #ffd060, rgba(255,200,60,x), rgba(255,215,70,x)
+- Curtains:            #1e2a1a, #111a10
+- Floor wood:          #2a1d0f → #120e07
+
+---
+
+KEY TECHNICAL RULES
+
+- Everything in one HTML file, no external assets
+- Room uses position:fixed; width:1440px; height:600px scaled via JS transform:scale()
+- All furniture uses position:absolute with bottom:26% (floor line) as reference
+- Lamp assembly is z-index:50 so it always renders above wall art and all other elements
+- Floor planks div extends left/right by -60% and height 340%, rotated on X axis
+  with perspective 240px from bottom center
+- Grain is a position:fixed SVG data-URL overlay at z-index 100
+- All lighting transitions use CSS only — JS only adds/removes the .on class on .room
+- Music only starts on user click (required by browser autoplay policy)
+```
+
+</details>
+
+> 💡 **Tip:** Paste this prompt into [Claude](https://claude.ai) or another capable AI assistant to regenerate or customise the project from scratch. You can modify sections of the prompt to change furniture, color palette, text content, or canvas dimensions before generating.
+
+---
+
 ## ✨ Features
 
 | Feature | Description |
 |---|---|
-| 🏠 **Full Loft Room Scene** | Ceiling, back wall, side walls, wainscot panels, molding - all in pure CSS |
-| 🪵 **3D Perspective Floor** | Wood planks that recede toward the horizon using CSS `rotateX` perspective - no WebGL |
+| 🏠 **Full Loft Room Scene** | Ceiling, back wall, side walls, wainscot panels, molding — all in pure CSS |
+| 🪵 **3D Perspective Floor** | Wood planks that recede toward the horizon using CSS `rotateX` perspective — no WebGL |
 | 💡 **Interactive Light Switch** | Realistic rocker switch with physical tilt animation, LED indicator, and full lighting toggle |
-| 🌡️ **Dynamic Lighting System** | 12+ elements change simultaneously - bulb glow, floor pool, wall bloom, shade glow, table lamp |
+| 🌡️ **Dynamic Lighting System** | 12+ elements change simultaneously — bulb glow, floor pool, wall bloom, shade glow, table lamp |
 | 🪑 **Tufted Leather Armchair** | Fully CSS-rendered with tufting buttons, padded seat, armrests and legs |
 | 📚 **Bookshelf with Books & Plant** | Three shelves of varied books, small plant with leaves and terracotta pot |
 | 🪔 **Side Table with Lamp** | Working table lamp that activates with the main lights |
 | 🪟 **Window with Curtains** | Dark glass pane with cross mullions, curtain rod, and draped green curtains |
 | 🖼️ **Framed Wall Art** | Abstract CSS painting in an ornate dark wood frame with artist label |
-| 🎵 **Procedural Ambient Music** | Synthesised pads and melody via Web Audio API - zero audio files |
+| 🎵 **Procedural Ambient Music** | Synthesised pads and melody via Web Audio API — zero audio files |
 | 📱 **Mobile Landscape Mode** | Portrait triggers a beautiful "rotate your phone" screen; landscape fills perfectly |
 | 🎞️ **Film Grain Overlay** | SVG fractal noise at 4% opacity for a cinematic, analogue feel |
 | 🔤 **Elegant Typography** | Cormorant Garamond (serif) + DM Mono (mono) loaded from Google Fonts |
@@ -97,8 +295,8 @@ The room comes alive when you click the wall switch. Lights glow, the floor refl
 Clone the repo and open `index.html` directly in your browser:
 
 ```bash
-git clone https://github.com/your-username/abinya-loft.git
-cd abinya-loft
+git clone https://github.com/Ratikanta73/Interactive-Loft-Room-Landing-Page.git
+cd Interactive-Loft-Room-Landing-Page
 open index.html        # macOS
 start index.html       # Windows
 xdg-open index.html    # Linux
@@ -120,8 +318,8 @@ xdg-open index.html    # Linux
 
 ```bash
 # Clone
-git clone https://github.com/your-username/abinya-loft.git
-cd abinya-loft
+git clone https://github.com/Ratikanta73/Interactive-Loft-Room-Landing-Page.git
+cd Interactive-Loft-Room-Landing-Page
 
 # Edit the file
 code index.html     # or any text editor
@@ -792,13 +990,13 @@ The phone icon animates with a simple CSS keyframe that tilts -90° and back on 
 ### GitHub Pages (Free, Recommended)
 
 ```
-1. Fork this repository
+1. Fork this repository or visit [Ratikanta73/Interactive-Loft-Room-Landing-Page](https://github.com/Ratikanta73/Interactive-Loft-Room-Landing-Page)
 2. Go to: Settings → Pages
 3. Source: Deploy from a branch
 4. Branch: main  /  Folder: / (root)
 5. Click Save
 6. Wait ~60 seconds
-7. Visit: https://YOUR-USERNAME.github.io/REPO-NAME
+7. Visit: https://Ratikanta73.github.io/Interactive-Loft-Room-Landing-Page
 ```
 
 ### Netlify (Free, Drag & Drop)
@@ -925,8 +1123,8 @@ Contributions are warmly welcome! Here's how to get involved:
 # 1. Fork the repository on GitHub
 
 # 2. Clone your fork
-git clone https://github.com/YOUR-USERNAME/abinya-loft.git
-cd abinya-loft
+git clone https://github.com/Ratikanta73/Interactive-Loft-Room-Landing-Page.git
+cd Interactive-Loft-Room-Landing-Page
 
 # 3. Create a branch for your feature
 git checkout -b feature/add-cat-on-chair
