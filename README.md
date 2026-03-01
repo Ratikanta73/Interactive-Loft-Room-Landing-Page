@@ -1,4 +1,4 @@
-# 🕯️ Abinya 3.0 — Interactive Loft Room Landing Page
+# 🕯️ Interactive Loft Room Landing Page
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML-Single%20File-E34F26?style=for-the-badge&logo=html5&logoColor=white" />
