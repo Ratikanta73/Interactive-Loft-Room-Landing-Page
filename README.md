@@ -75,16 +75,16 @@ The room comes alive when you click the wall switch. Lights glow, the floor refl
 
 | Feature | Description |
 |---|---|
-| 🏠 **Full Loft Room Scene** | Ceiling, back wall, side walls, wainscot panels, molding — all in pure CSS |
-| 🪵 **3D Perspective Floor** | Wood planks that recede toward the horizon using CSS `rotateX` perspective — no WebGL |
+| 🏠 **Full Loft Room Scene** | Ceiling, back wall, side walls, wainscot panels, molding - all in pure CSS |
+| 🪵 **3D Perspective Floor** | Wood planks that recede toward the horizon using CSS `rotateX` perspective - no WebGL |
 | 💡 **Interactive Light Switch** | Realistic rocker switch with physical tilt animation, LED indicator, and full lighting toggle |
-| 🌡️ **Dynamic Lighting System** | 12+ elements change simultaneously — bulb glow, floor pool, wall bloom, shade glow, table lamp |
+| 🌡️ **Dynamic Lighting System** | 12+ elements change simultaneously - bulb glow, floor pool, wall bloom, shade glow, table lamp |
 | 🪑 **Tufted Leather Armchair** | Fully CSS-rendered with tufting buttons, padded seat, armrests and legs |
 | 📚 **Bookshelf with Books & Plant** | Three shelves of varied books, small plant with leaves and terracotta pot |
 | 🪔 **Side Table with Lamp** | Working table lamp that activates with the main lights |
 | 🪟 **Window with Curtains** | Dark glass pane with cross mullions, curtain rod, and draped green curtains |
 | 🖼️ **Framed Wall Art** | Abstract CSS painting in an ornate dark wood frame with artist label |
-| 🎵 **Procedural Ambient Music** | Synthesised pads and melody via Web Audio API — zero audio files |
+| 🎵 **Procedural Ambient Music** | Synthesised pads and melody via Web Audio API - zero audio files |
 | 📱 **Mobile Landscape Mode** | Portrait triggers a beautiful "rotate your phone" screen; landscape fills perfectly |
 | 🎞️ **Film Grain Overlay** | SVG fractal noise at 4% opacity for a cinematic, analogue feel |
 | 🔤 **Elegant Typography** | Cormorant Garamond (serif) + DM Mono (mono) loaded from Google Fonts |
