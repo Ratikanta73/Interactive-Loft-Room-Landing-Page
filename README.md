@@ -23,8 +23,25 @@
 
 ---
 
+## 🖼️ Preview
+
+### 🌑 Lights Off — Before
+
+![Before — Lights Off](Before.png)
+
+> The room sits in darkness. Furniture is barely visible. The switch on the right wall waits.
+
+### 💡 Lights On — After
+
+![After — Lights On](After.png)
+
+> One click on the rocker switch. The bulb flickers to life, warm amber floods the room, the floor reflects the glow, and *"The Ideas Are Warming Up…"* fades in. Ambient music begins.
+
+---
+
 ## 📖 Table of Contents
 
+- [Preview](#️-preview)
 - [What Is This?](#-what-is-this)
 - [Text Prompt to Regenerate This](#-text-prompt-to-regenerate-this)
 - [Features](#-features)
